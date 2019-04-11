@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0AFFAEF1FB83029D52D02438 /* Pods_Itunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E05DD0791DC16207A91C3AF /* Pods_Itunes.framework */; };
+		39168280225F7AF100BDD47A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916827F225F7AF100BDD47A /* FavoritesViewController.swift */; };
+		39350ED4224E4A9E007CD5C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39350ED3224E4A9E007CD5C5 /* LoginViewController.swift */; };
+		39350ED6224E700D007CD5C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39350ED5224E700D007CD5C5 /* GoogleService-Info.plist */; };
 		397B0C31224D2122005C24FB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397B0C30224D2122005C24FB /* TableViewCell.swift */; };
 		39CF0B10223BDD68005793DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CF0B0F223BDD68005793DD /* AppDelegate.swift */; };
 		39CF0B12223BDD68005793DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CF0B11223BDD68005793DD /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		0EC3AF650AF4F863DB9214B6 /* Pods-Itunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes.debug.xcconfig"; path = "Target Support Files/Pods-Itunes/Pods-Itunes.debug.xcconfig"; sourceTree = "<group>"; };
 		300BEE7B955BFB72D7597CDE /* Pods-Itunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes.release.xcconfig"; path = "Target Support Files/Pods-Itunes/Pods-Itunes.release.xcconfig"; sourceTree = "<group>"; };
+		3916827F225F7AF100BDD47A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		39350ED3224E4A9E007CD5C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		39350ED5224E700D007CD5C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		397B0C30224D2122005C24FB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		39CF0B0C223BDD68005793DD /* Itunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39CF0B0F223BDD68005793DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,10 +138,13 @@
 				39CF0B0F223BDD68005793DD /* AppDelegate.swift */,
 				39CF0B11223BDD68005793DD /* ViewController.swift */,
 				39CF0B13223BDD68005793DD /* Main.storyboard */,
+				39350ED3224E4A9E007CD5C5 /* LoginViewController.swift */,
 				39CF0B16223BDD69005793DD /* Assets.xcassets */,
 				39CF0B18223BDD69005793DD /* LaunchScreen.storyboard */,
 				39CF0B1B223BDD69005793DD /* Info.plist */,
 				397B0C30224D2122005C24FB /* TableViewCell.swift */,
+				39350ED5224E700D007CD5C5 /* GoogleService-Info.plist */,
+				3916827F225F7AF100BDD47A /* FavoritesViewController.swift */,
 			);
 			path = Itunes;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39CF0B1A223BDD69005793DD /* LaunchScreen.storyboard in Resources */,
+				39350ED6224E700D007CD5C5 /* GoogleService-Info.plist in Resources */,
 				39CF0B17223BDD69005793DD /* Assets.xcassets in Resources */,
 				39CF0B15223BDD68005793DD /* Main.storyboard in Resources */,
 			);
@@ -312,14 +322,30 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Itunes/Pods-Itunes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -402,6 +428,8 @@
 				39CF0B12223BDD68005793DD /* ViewController.swift in Sources */,
 				397B0C31224D2122005C24FB /* TableViewCell.swift in Sources */,
 				39CF0B10223BDD68005793DD /* AppDelegate.swift in Sources */,
+				39350ED4224E4A9E007CD5C5 /* LoginViewController.swift in Sources */,
+				39168280225F7AF100BDD47A /* FavoritesViewController.swift in Sources */,
 				39CF0B3E223BE31A005793DD /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

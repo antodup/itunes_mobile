@@ -8,6 +8,9 @@ target 'Itunes' do
   # Pods for Itunes
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 5.0.0-beta.3'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 
   target 'ItunesTests' do

@@ -5,6 +5,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var artiste: UILabel!
     @IBOutlet weak var ablum: UILabel!
     @IBOutlet weak var musique: UILabel!
+    @IBOutlet weak var favorites: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
