@@ -9,8 +9,10 @@
 import Foundation
 
 class Album{
+    var idSong = ""
     var title = ""
     var artiste = ""
     var musique = ""
     var pictures = ""
+    var urlPreview = ""
 }

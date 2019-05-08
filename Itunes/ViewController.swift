@@ -14,11 +14,12 @@ import FirebaseAuth
 import Firebase
 
 
-class ViewController: UIViewController, UITabBarDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ViewController: UIViewController, UITabBarDelegate, UITableViewDataSource, UITextFieldDelegate, UITableViewDelegate {
     var albums:[Album] = []
     var nameArtist = String()
     var results = [JSON]()
-    var favorites:[Album]!
+    var favorites:[Album] = []
+    var index = 0
     
 
 
@@ -56,6 +57,7 @@ class ViewController: UIViewController, UITabBarDelegate, UITableViewDataSource,
         } else {
             albums.removeAll();
             APIRequest(textSearch: self.nameArtist)
+            
         }
 
         return true
@@ -82,21 +84,49 @@ class ViewController: UIViewController, UITabBarDelegate, UITableViewDataSource,
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.index = indexPath.row
+        performSegue(withIdentifier: "preview", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "preview" {
+            let playerController = segue.destination as! PlayerViewController
+            
+            playerController.coverImage = self.albums[self.index].pictures
+            playerController.titleMusic = self.albums[self.index].musique
+            playerController.artisteName = self.albums[self.index].artiste
+            playerController.kindMusic = self.albums[self.index].title
+            playerController.urlPreview = self.albums[self.index].urlPreview
+        }
+        else if segue.identifier == "showFav" {
+            let pageFavController = segue.destination as! PageFavViewController
+            pageFavController.favoritesShow = favorites
+        }
+      
+    }
     
     @objc func addFavorites(sender:UIButton) {
-        
         if sender.isSelected {
             sender.isSelected = false
-            print()
-            //favorites.remove(at: sender.tag)
-            print("dislike")
+            var currentIndex = 0
+
+            for favoris in favorites{
+                if favoris.idSong == albums[sender.tag].idSong {
+                    print("Found \(favoris.musique) for index \(currentIndex)")
+                    break
+                }
+                currentIndex += 1
+            }
+            favorites.remove(at: currentIndex)
+            print(favorites)
         } else {
             sender.isSelected = true
-            print("like")
             favorites.append(albums[sender.tag])
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchText.returnKeyType = UIReturnKeyType.search
@@ -114,10 +144,12 @@ class ViewController: UIViewController, UITabBarDelegate, UITableViewDataSource,
                 for result in self.results {
                    //self.albums.removeAll(keepingCapacity: true)
                     let album = Album()
+                    album.idSong = "\(result["trackId"].stringValue)"
                     album.title = "\(result["primaryGenreName"].stringValue)"
                     album.artiste =  "\(result["artistName"].stringValue)"
-                    album.pictures = "\(result["artworkUrl60"].stringValue)"
+                    album.pictures = "\(result["artworkUrl100"].stringValue)"
                     album.musique = "\(result["trackName"].stringValue)"
+                    album.urlPreview = "\(result["previewUrl"].stringValue)"
                     self.albums.append(album);
                     self.Table.reloadData()
                 }

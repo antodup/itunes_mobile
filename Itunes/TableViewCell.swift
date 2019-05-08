@@ -6,6 +6,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var ablum: UILabel!
     @IBOutlet weak var musique: UILabel!
     @IBOutlet weak var favorites: UIButton!
+    @IBOutlet weak var deleteFav: UIButton!
     
     
     override func awakeFromNib() {

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0AFFAEF1FB83029D52D02438 /* Pods_Itunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E05DD0791DC16207A91C3AF /* Pods_Itunes.framework */; };
-		39168280225F7AF100BDD47A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3916827F225F7AF100BDD47A /* FavoritesViewController.swift */; };
+		391E94D62282D61800A56CA2 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E94D52282D61800A56CA2 /* PlayerViewController.swift */; };
+		391E94D822830C3100A56CA2 /* PageFavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391E94D722830C3100A56CA2 /* PageFavViewController.swift */; };
 		39350ED4224E4A9E007CD5C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39350ED3224E4A9E007CD5C5 /* LoginViewController.swift */; };
 		39350ED6224E700D007CD5C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39350ED5224E700D007CD5C5 /* GoogleService-Info.plist */; };
 		397B0C31224D2122005C24FB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397B0C30224D2122005C24FB /* TableViewCell.swift */; };
@@ -44,7 +45,8 @@
 /* Begin PBXFileReference section */
 		0EC3AF650AF4F863DB9214B6 /* Pods-Itunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes.debug.xcconfig"; path = "Target Support Files/Pods-Itunes/Pods-Itunes.debug.xcconfig"; sourceTree = "<group>"; };
 		300BEE7B955BFB72D7597CDE /* Pods-Itunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes.release.xcconfig"; path = "Target Support Files/Pods-Itunes/Pods-Itunes.release.xcconfig"; sourceTree = "<group>"; };
-		3916827F225F7AF100BDD47A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		391E94D52282D61800A56CA2 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		391E94D722830C3100A56CA2 /* PageFavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFavViewController.swift; sourceTree = "<group>"; };
 		39350ED3224E4A9E007CD5C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39350ED5224E700D007CD5C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		397B0C30224D2122005C24FB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				39CF0B3D223BE31A005793DD /* Album.swift */,
 				39CF0B0F223BDD68005793DD /* AppDelegate.swift */,
 				39CF0B11223BDD68005793DD /* ViewController.swift */,
+				391E94D722830C3100A56CA2 /* PageFavViewController.swift */,
 				39CF0B13223BDD68005793DD /* Main.storyboard */,
 				39350ED3224E4A9E007CD5C5 /* LoginViewController.swift */,
 				39CF0B16223BDD69005793DD /* Assets.xcassets */,
@@ -144,7 +147,7 @@
 				39CF0B1B223BDD69005793DD /* Info.plist */,
 				397B0C30224D2122005C24FB /* TableViewCell.swift */,
 				39350ED5224E700D007CD5C5 /* GoogleService-Info.plist */,
-				3916827F225F7AF100BDD47A /* FavoritesViewController.swift */,
+				391E94D52282D61800A56CA2 /* PlayerViewController.swift */,
 			);
 			path = Itunes;
 			sourceTree = "<group>";
@@ -429,8 +432,9 @@
 				397B0C31224D2122005C24FB /* TableViewCell.swift in Sources */,
 				39CF0B10223BDD68005793DD /* AppDelegate.swift in Sources */,
 				39350ED4224E4A9E007CD5C5 /* LoginViewController.swift in Sources */,
-				39168280225F7AF100BDD47A /* FavoritesViewController.swift in Sources */,
 				39CF0B3E223BE31A005793DD /* Album.swift in Sources */,
+				391E94D62282D61800A56CA2 /* PlayerViewController.swift in Sources */,
+				391E94D822830C3100A56CA2 /* PageFavViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

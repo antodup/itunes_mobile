@@ -29,14 +29,14 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func signin_Action(_ sender: Any) {
-
+        
         Auth.auth().signIn(withEmail: Mail.text!, password: Password.text!) { [weak self] user, error in
             if(error != nil) {
                 let alert : UIAlertView = UIAlertView(title: "Error", message: error?.localizedDescription, delegate: nil, cancelButtonTitle: "Cancel")
                 alert.show()
             }
             else {
-                let secondVC = self!.storyboard?.instantiateViewController(withIdentifier: "viewCont") as! ViewController
+                let secondVC = self!.storyboard?.instantiateViewController(withIdentifier: "viewCont") as! UINavigationController
                 self!.present(secondVC, animated:true, completion:nil)
             }
         }
@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
                 alert.show()
             }
             else {
-                let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "viewCont") as! ViewController
+                let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "viewCont") as! UINavigationController
                 self.present(secondVC, animated:true, completion:nil)
             }
         }
